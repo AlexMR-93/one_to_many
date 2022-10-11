@@ -8,7 +8,7 @@ RSpec.describe("Authors show page") do
     @author3 = Author.create!(    name: " Gabe",     has_won_awards: false,     books_written: 3)
   end
 
-  it("parent with that id including the parent's attributes") do
+  it("#2.parent with that id including the parent's attributes") do
     visit("/authors/#{@author1.id}")
     save_and_open_page
     expect(page).to(have_content("Authors name:#{@author1.name}"))

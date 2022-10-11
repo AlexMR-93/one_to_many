@@ -1,0 +1,8 @@
+<h1> Books index page</h1>
+
+
+<%@books.each do |book|%>
+  <h3>Book title:<%= book.title %></h3>
+  <p>Best seller?<%= book.best_seller %></p>
+  <p>Book length is <%= book.pages %> pages</p>
+<% end %>
