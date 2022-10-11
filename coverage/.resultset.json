@@ -240,8 +240,9 @@
       },
       "/Users/alexmorareyes/turing/22mod/projects/r_rails/config/routes.rb": {
         "lines": [
-          1,
           null,
+          1,
+          1,
           null
         ]
       },
@@ -268,36 +269,22 @@
           null
         ]
       },
-      "/Users/alexmorareyes/turing/22mod/projects/r_rails/spec/models/book_spec.rb": {
+      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/controllers/authors_controller.rb": {
         "lines": [
           1,
-          null,
-          null,
           1,
           1,
-          2,
-          2,
-          2,
-          2,
-          null,
-          null,
-          1,
-          2,
           null,
           null
         ]
       },
-      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/models/book.rb": {
+      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/controllers/application_controller.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          1,
           1,
           null
         ]
       }
     },
-    "timestamp": 1665521005
+    "timestamp": 1665526917
   }
 }
