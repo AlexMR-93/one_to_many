@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 2022_10_10_235150) do
     t.integer "pages"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "authors_id"
-    t.index ["authors_id"], name: "index_books_on_authors_id"
+    t.bigint "author_id"
+    t.index ["author_id"], name: "index_books_on_author_id"
   end
 
-  add_foreign_key "books", "authors", column: "authors_id"
+  add_foreign_key "books", "authors"
 end
