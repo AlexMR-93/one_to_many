@@ -12,4 +12,16 @@ RSpec.describe(Author, type: :model) do
   describe("models") do
     it { should(have_many(:books)) }
   end
+
+  describe("model method") do
+    before(:each) do
+      @author1 = Author.create!(      name: " Alex",       has_won_awards: false,       books_written: 1,       created_at: Time.now)
+      @author2 = Author.create!(      name: " Peyton",       has_won_awards: true,       books_written: 2,       created_at: Time.now - 2.hours)
+      @author3 = Author.create!(      name: " Gabe",       has_won_awards: false,       books_written: 3,       created_at: Time.now - 1.hours)
+    end
+
+    it("order by creation") do
+      expect(Author.order_by_creation).to(eq([@author1, @author3, @author2]))
+    end
+  end
 end
