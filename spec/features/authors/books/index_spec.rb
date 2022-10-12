@@ -15,7 +15,6 @@ RSpec.describe("Authors books index page") do
   describe(" '/parents/:parent_id/child_table_name'") do
     it("#5. Child that is associated with that Parent with each Child's attributes") do
       visit("/authors/#{@author1.id}/books")
-      save_and_open_page
       expect(page).to(have_content("Book title:#{@book1.title}"))
       expect(page).to(have_content("Best seller?#{@book1.best_seller}"))
       expect(page).to(have_content("Book length is #{@book1.pages} pages"))
