@@ -246,6 +246,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -282,13 +283,10 @@
           null
         ]
       },
-      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/controllers/books_controller.rb": {
+      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/controllers/authors_books_controller.rb": {
         "lines": [
           1,
           1,
-          0,
-          null,
-          null,
           1,
           1,
           null,
@@ -302,6 +300,6 @@
         ]
       }
     },
-    "timestamp": 1665600496
+    "timestamp": 1665607755
   }
 }
