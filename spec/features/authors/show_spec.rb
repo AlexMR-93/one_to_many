@@ -21,7 +21,15 @@ RSpec.describe("Authors show page") do
 
   it("#7.count of the number of children associated with this parent") do
     visit("/authors/#{@author1.id}")
-    save_and_open_page
     expect(page).to(have_content("Number of books associated with author:#{@author1.book_count}"))
+  end
+
+  describe("When I visit a parent show page ('/parents/:id')") do
+    it("#10.Then I see a link to take me to that parent's `child_table_name` page ('/parents/:id/child_table_name')") do
+      visit("/authors/#{@author1.id}")
+      expect(page).to(have_link("Books pertaining to Author"))
+      click_link("Books pertaining to Author")
+      expect(current_path).to(eq("/authors/#{@author1.id}/books"))
+    end
   end
 end
