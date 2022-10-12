@@ -17,4 +17,11 @@ RSpec.describe("Books index") do
     expect(page).to(have_content("Best seller?#{@book1.best_seller}"))
     expect(page).to(have_content("Book length is #{@book1.pages} pages"))
   end
+
+  describe("When I visit any page on the site") do
+    it("#8.Then I see a link at the top of the page that takes me to the Parent Index") do
+      visit("/books")
+      expect(page).to(have_link("Books"))
+    end
+  end
 end
