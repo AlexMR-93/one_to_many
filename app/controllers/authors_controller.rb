@@ -12,18 +12,28 @@ class AuthorsController < ApplicationController
 
   def create
     @author = Author.new(author_params)
+    @author.save
+    redirect_to("/authors")
+  end
 
-    if @author.save
-      redirect_to("/authors")
+  def edit
+    @author = Author.find(params[:id])
+  end
+
+  def update
+    author = Author.find(params[:id])
+
+    if author.update(author_params)
+      redirect_to("/authors/#{author.id}")
     else
-      redirect_to("/authors/new")
-      flash[:alert] = "Error"
+      flash[:notice] = "ERROR!"
+      redirect_to("/authors/#{@author.id}/edit")
     end
   end
 
   private
 
   def author_params
-    params.permit(:name, :has_won_awards, :books_written)
+    params.permit(:name, :has_won_awards, :books_written, :author_id)
   end
 end
