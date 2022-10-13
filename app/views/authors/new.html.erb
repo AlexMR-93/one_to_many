@@ -1,0 +1,15 @@
+<h1>New Author</h1>
+
+<%= form_with url: "/authors", method: :post,local: true do |form| %>
+  <%= form.label :name, "Name:" %>
+  <%= form.text_field :name %>
+
+  <%= form.radio_button :has_won_awards, true %>
+  <%= form.label :has_won_awards, "Has won awards(True)" %>
+  <%= form.radio_button :has_won_awards, false %>
+  <%= form.label :has_won_awards, "Has Not won awards(False)" %>
+
+  <%= form.label :books_written, "How many books written:" %>
+  <%=form.number_field :books_written %>
+  <%= form.submit "Create Author" %>
+<% end %>

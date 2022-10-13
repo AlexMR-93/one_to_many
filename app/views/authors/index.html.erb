@@ -2,6 +2,8 @@
 
 
 <%@authors.each do |author|%>
-  <p>Authors name:<%= author.name %></p>
+  <h3><p>Authors name:<%= author.name %></p></h3>
   <p>Authors Created at: <%= author.created_at %></p>
   <% end %>
+
+<%= link_to "New Parent", "/authors/new" %>
