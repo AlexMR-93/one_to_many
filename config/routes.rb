@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post("/authors",   to: "authors#create")
   get("/authors/:id",   to: "authors#show")
   get("/authors/:id/books",   to: "authors_books#index")
+  get("/authors/:id/edit",   to: "authors#edit")
+  patch("/authors/:id",   to: "authors#update")
   get("/books",   to: "books#index")
   get("/books/:id",   to: "books#show")
 end

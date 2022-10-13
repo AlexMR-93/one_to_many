@@ -32,4 +32,31 @@ RSpec.describe("Authors show page") do
       expect(current_path).to(eq("/authors/#{@author1.id}/books"))
     end
   end
+
+  describe(" I see a link to update the parent Update Parent") do
+    describe("I click the link Update Parent") do
+      it("#12.I am taken to '/parents/:id/edit' where I  see a form to edit the parent's attributes:") do
+        visit("/authors/#{@author1.id}")
+        expect(page).to(have_link("Update Author"))
+        click_link(("Update Author"))
+        expect(current_path).to(eq("/authors/#{@author1.id}/edit"))
+      end
+    end
+  end
+
+  describe("I fill out the form with updated information") do
+    describe("I click the button to submit the form") do
+      describe("Then a `PATCH` request is sent to '/parents/:id',the parent's info is updated,") do
+        it("I am redirected to the Parent's Show page where I see the parent's updated info") do
+          visit("/authors/#{@author1.id}/edit")
+          fill_in("name",           with: "TIMON")
+          fill_in("books_written",           with: 7)
+
+          #choose(("Has won awards(True)"))
+          click_button("Submit")
+          expect(current_path).to(eq("/authors/#{@author1.id}"))
+        end
+      end
+    end
+  end
 end
