@@ -23,4 +23,15 @@ RSpec.describe("Authors books index page") do
       expect(page).to(have_content("Book length is #{@book4.pages} pages"))
     end
   end
+
+  describe(" I see a link to add a new adoptable child for that parent Create Child") do
+    describe(" I click the link") do
+      it("#13. I am taken to '/parents/:parent_id/child_table_name/new' where I see a form to add a new adoptable child") do
+        visit("/authors/#{@author1.id}/books")
+        expect(page).to(have_link("Create Book"))
+        click_link(("Create Book"))
+        expect(current_path).to(eq("/authors/#{@author1.id}/books/new"))
+      end
+    end
+  end
 end
