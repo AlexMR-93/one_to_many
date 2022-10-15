@@ -59,4 +59,15 @@ RSpec.describe("Authors show page") do
       end
     end
   end
+
+  describe("I see a link to delete the parent") do
+    describe("When I click the link Delete Parent") do
+      it("#19.Then a 'DELETE' request is sent to '/parents/:id',") do
+        visit("/authors/#{@author1.id}")
+        expect(page).to(have_link("Delete#{@author1.name}"))
+        click_link(("Delete#{@author1.name}"))
+        expect(current_path).to(eq("/authors"))
+      end
+    end
+  end
 end
