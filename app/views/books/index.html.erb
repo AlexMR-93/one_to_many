@@ -6,4 +6,5 @@
   <p>Best seller?<%= book.best_seller %></p>
   <p>Book length is <%= book.pages %> pages</p>
   <%= link_to "Edit Book:#{book.title}", "/books/#{book.id}/edit" %>
+  <%= link_to "Delete Book:#{book.title}", "/books/#{book.id}", method: :delete %>
 <% end %>

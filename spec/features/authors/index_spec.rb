@@ -37,15 +37,26 @@ RSpec.describe("Authors index") do
       click_link("New Parent")
       expect(current_path).to(eq("/authors/new"))
     end
+  end
 
-    describe("Next to every parent, I see a link to edit that parent's info") do
-      describe("When I click the link") do
-        it("#17.I should be taken to that parent's edit page where I can update its information just like in User Story 12") do
-          visit("/authors")
-          expect(page).to(have_link("Edit Author:#{@author1.name}"))
-          click_link("Edit Author:#{@author1.name}")
-          expect(current_path).to(eq("/authors/#{@author1.id}/edit"))
-        end
+  describe("Next to every parent, I see a link to edit that parent's info") do
+    describe("When I click the link") do
+      it("#17.I should be taken to that parent's edit page where I can update its information just like in User Story 12") do
+        visit("/authors")
+        expect(page).to(have_link("Edit Author:#{@author1.name}"))
+        click_link("Edit Author:#{@author1.name}")
+        expect(current_path).to(eq("/authors/#{@author1.id}/edit"))
+      end
+    end
+  end
+
+  describe("Next to every parent, I see a link to delete that parent") do
+    describe("When I click the link") do
+      it("#22.I am returned to the Parent Index Page where I no longer see that parent") do
+        visit("/authors")
+        expect(page).to(have_link("Delete Author:#{@author1.name}"))
+        click_link("Delete Author:#{@author1.name}")
+        expect(current_path).to(eq("/authors"))
       end
     end
   end
