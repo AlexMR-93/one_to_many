@@ -41,7 +41,7 @@ RSpec.describe("Authors books index page") do
         visit("/authors/#{@author1.id}/books")
         expect(page).to(have_link("Sort Alphabetically"))
         click_link("Sort Alphabetically")
-        expect(current_path).to(eq("/authors/#{@author1.id}/books"))
+        expect(current_path).to(eq("/authors/#{@author1.id}/books/sort?=1"))
       end
     end
   end
