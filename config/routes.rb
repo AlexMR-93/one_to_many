@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post("/authors",   to: "authors#create")
   get("/authors/:id",   to: "authors#show")
   patch("/authors/:id",   to: "authors#update")
+  delete("authors/:id",   to: "authors#destroy")
   get("/authors/:id/books/new",   to: "authors_books#new")
   get("/authors/:id/books",   to: "authors_books#index")
   post("/authors/:id/books",   to: "authors_books#create")

@@ -6,5 +6,6 @@
 <h5>Author books written:<%= @author.books_written %></h5>
 <h5>Number of books associated with author:<%=@author.book_count%></h5>
 <%= link_to "Books pertaining to Author", "/authors/#{@author.id}/books" %>
-
 <%= link_to "Update Author", "/authors/#{@author.id}/edit" %>
+
+<%= link_to "Delete#{@author.name}", "/authors/#{@author.id}",method: :delete  %>
