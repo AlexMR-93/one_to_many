@@ -7,4 +7,5 @@
   <h3><p>Authors name:<%= author.name %></p></h3>
   <p>Authors Created at: <%= author.created_at %></p>
   <%= link_to "Edit Author:#{author.name}", "/authors/#{author.id}/edit" %>
+  <%= link_to "Delete Author:#{author.name}", "/authors/#{author.id}", method: :delete %>
   <% end %>

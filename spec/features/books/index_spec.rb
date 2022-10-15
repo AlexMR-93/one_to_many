@@ -35,4 +35,15 @@ RSpec.describe("Books index") do
       end
     end
   end
+
+  describe("Next to every child, I see a link to delete that child") do
+    describe("When I click the link") do
+      it("#23.I am returned to the Child Index Page where I no longer see that child") do
+        visit("/books")
+        expect(page).to(have_link("Delete Book:#{@book1.title}"))
+        click_link("Delete Book:#{@book1.title}")
+        expect(current_path).to(eq("/books"))
+      end
+    end
+  end
 end
