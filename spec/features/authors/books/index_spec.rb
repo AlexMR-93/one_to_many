@@ -34,4 +34,15 @@ RSpec.describe("Authors books index page") do
       end
     end
   end
+
+  describe("I see a link to sort children in alphabetical order") do
+    describe(" I click on the link") do
+      it("  I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order") do
+        visit("/authors/#{@author1.id}/books")
+        expect(page).to(have_link("Sort Alphabetically"))
+        click_link("Sort Alphabetically")
+        expect(current_path).to(eq("/authors/#{@author1.id}/books/sort?=1"))
+      end
+    end
+  end
 end

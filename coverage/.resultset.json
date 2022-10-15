@@ -264,27 +264,6 @@
           null
         ]
       },
-      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/models/book.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/models/application_record.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
       "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/models/author.rb": {
         "lines": [
           1,
@@ -302,8 +281,67 @@
           null,
           null
         ]
+      },
+      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/models/book.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/controllers/authors_books_controller.rb": {
+        "lines": [
+          1,
+          1,
+          4,
+          null,
+          4,
+          1,
+          null,
+          3,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1665796867
+    "timestamp": 1665800949
   }
 }
