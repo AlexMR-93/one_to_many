@@ -1,0 +1,17 @@
+<h1>Edit Book Page</h1>
+
+
+<%= form_with url: "/books/#{@book.id}", method: :patch,local: true do |form| %>
+<%= form.label :title, "Title:" %>
+<%= form.text_field :title %>
+
+<%= form.label :best_seller, "Best seller(YES)" %>
+<%= form.radio_button :best_seller, true %>
+<%= form.label :best_seller, "Best seller(No)" %>
+<%= form.radio_button :best_seller, false %>
+
+
+<%= form.label :pages, "Number of pages book contains:" %>
+<%=form.number_field :pages %>
+<%= form.submit "Create Book" %>
+<% end %>
