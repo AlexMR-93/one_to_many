@@ -42,8 +42,8 @@ RSpec.describe("Authors index") do
       describe("When I click the link") do
         it("#17.I should be taken to that parent's edit page where I can update its information just like in User Story 12") do
           visit("/authors")
-          expect(page).to(have_link("Edit#{@author1.name}"))
-          click_link("Edit#{@author1.name}")
+          expect(page).to(have_link("Edit Author:#{@author1.name}"))
+          click_link("Edit Author:#{@author1.name}")
           expect(current_path).to(eq("/authors/#{@author1.id}/edit"))
         end
       end
