@@ -256,6 +256,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -274,11 +275,11 @@
           1,
           null,
           1,
-          1,
+          0,
           null,
           null,
           1,
-          7,
+          0,
           null,
           null
         ]
@@ -304,7 +305,7 @@
           null
         ]
       },
-      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/controllers/authors_controller.rb": {
+      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/controllers/books_controller.rb": {
         "lines": [
           1,
           1,
@@ -312,20 +313,11 @@
           null,
           null,
           1,
-          6,
+          4,
           null,
           null,
           1,
-          null,
-          null,
           1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          2,
           null,
           null,
           1,
@@ -333,9 +325,6 @@
           null,
           1,
           1,
-          null,
-          0,
-          0,
           null,
           null,
           null,
@@ -358,40 +347,8 @@
           1,
           null
         ]
-      },
-      "/Users/alexmorareyes/turing/22mod/projects/r_rails/app/controllers/authors_books_controller.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          null,
-          1,
-          0,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1665814026
+    "timestamp": 1665815354
   }
 }
