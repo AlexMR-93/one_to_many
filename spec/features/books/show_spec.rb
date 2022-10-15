@@ -39,4 +39,15 @@ RSpec.describe("Books show page") do
       end
     end
   end
+
+  describe("I see a link to delete the child") do
+    describe("When I click the link Delete Child") do
+      it("#20.Then a 'DELETE' request is sent to '/books/:id',") do
+        visit("/books/#{@book1.id}")
+        expect(page).to(have_link("Delete #{@book1.title}"))
+        click_link(("Delete #{@book1.title}"))
+        expect(current_path).to(eq("/books"))
+      end
+    end
+  end
 end
