@@ -5,5 +5,6 @@
   <p>Best seller?<%= book.best_seller %></p>
   <p>Book length is <%= book.pages %> pages</p>
 
-<% end %>
+<% end %> 
 <%= link_to "Create Book", "/authors/#{@author.id}/books/new" %>
+<%= link_to "Sort Alphabetically", "/authors/#{@author.id}/books?sort=1" %>

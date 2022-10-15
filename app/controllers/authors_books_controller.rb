@@ -1,7 +1,12 @@
 class AuthorsBooksController < ApplicationController
   def index
     @author = Author.find(params[:id])
-    @books = @author.books
+
+    if params[:sort] == "1"
+      @books = @author.books.order(:title)
+    else
+      @books = @author.books
+    end
   end
 
   def new
