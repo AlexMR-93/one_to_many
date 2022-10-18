@@ -29,6 +29,7 @@ RSpec.describe("Books index") do
     describe("When I click the link") do
       it("#17.I should be taken to that child's edit page where I can update its information just like in User Story 14") do
         visit("/books")
+        save_and_open_page
         expect(page).to(have_link("Edit Book:#{@book1.title}"))
         click_link("Edit Book:#{@book1.title}")
         expect(current_path).to(eq("/books/#{@book1.id}/edit"))
