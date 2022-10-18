@@ -17,10 +17,10 @@ RSpec.describe("Authors books index page") do
       visit("/authors/#{@author1.id}/books")
       expect(page).to(have_content("Book title:#{@book1.title}"))
       expect(page).to(have_content("Best seller?#{@book1.best_seller}"))
-      expect(page).to(have_content("Book length is #{@book1.pages} pages"))
+      expect(page).to(have_content("Book length is #{@book1.pages} page(s)"))
       expect(page).to(have_content("Book title:#{@book4.title}"))
       expect(page).to(have_content("Best seller?#{@book4.best_seller}"))
-      expect(page).to(have_content("Book length is #{@book4.pages} pages"))
+      expect(page).to(have_content("Book length is #{@book4.pages} page(s)"))
     end
   end
 
@@ -37,11 +37,28 @@ RSpec.describe("Authors books index page") do
 
   describe("I see a link to sort children in alphabetical order") do
     describe(" I click on the link") do
-      it("  I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order") do
+      it("#16.I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order") do
         visit("/authors/#{@author1.id}/books")
         expect(page).to(have_link("Sort Alphabetically"))
         click_link("Sort Alphabetically")
         expect(current_path).to(eq("/authors/#{@author1.id}/books"))
+      end
+    end
+  end
+
+  describe("I visit the Parent's children Index Page") do
+    describe("I see a form that allows me to input a number value") do
+      describe("When I input a number value and click the submit button that reads") do
+        describe(" Only return records with more than `number`of`column_name`") do
+          it("#21.I am brought back to the current index page with only the records that meet that threshold shown.") do
+            visit("/authors/#{@author1.id}/books")
+            expect(page).to(have_button("Filter book by page QTY"))
+            fill_in("Number of pages book contains:",             with: 120)
+            click_button("Filter book by page QTY")
+            expect(current_path).to(eq("/authors/#{@author1.id}/books"))
+            expect(page).to(have_content(@book1.title))
+          end
+        end
       end
     end
   end
