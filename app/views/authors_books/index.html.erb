@@ -3,8 +3,15 @@
 <%@books.each do |book|%>
   <h3>Book title:<%= book.title %></h3>
   <p>Best seller?<%= book.best_seller %></p>
-  <p>Book length is <%= book.pages %> pages</p>
+  <p>Book length is <%= book.pages %> page(s)</p>
 
-<% end %> 
+<% end %>
+
 <%= link_to "Create Book", "/authors/#{@author.id}/books/new" %>
 <%= link_to "Sort Alphabetically", "/authors/#{@author.id}/books?sort=1" %>
+
+<%= form_with url: "/authors/#{@author.id}/books", method: :get,local: true do |form| %>
+<%= form.label :poop, "Number of pages book contains:" %>
+<%=form.number_field :poop %>
+<%= form.submit "Filter book by page QTY " %>
+<% end %>

@@ -4,5 +4,7 @@
 <li>Best Seller:<%=@book.best_seller%></li>
 <li>Length of book:<%= @book.pages%> pages</li>
 
-<%= link_to "Update Book", "/books/#{@book.id}/edit" %>
-<%= link_to "Delete #{@book.title}", "/books/#{@book.id}",method: :delete  %>
+<ul>
+
+<ul><%= link_to "Update Book", "/books/#{@book.id}/edit" %></ul>
+<ul><%= link_to "Delete #{@book.title}", "/books/#{@book.id}",method: :delete  %></ul>

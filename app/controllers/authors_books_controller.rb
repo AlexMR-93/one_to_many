@@ -4,6 +4,8 @@ class AuthorsBooksController < ApplicationController
 
     if params[:sort] == "1"
       @books = @author.books.order(:title)
+    elsif params[:poop]
+      @books = @author.books.where("pages >= #{params[:poop]}")
     else
       @books = @author.books
     end

@@ -22,13 +22,8 @@ class AuthorsController < ApplicationController
 
   def update
     author = Author.find(params[:id])
-
-    if author.update(author_params)
-      redirect_to("/authors/#{author.id}")
-    else
-      flash[:notice] = "ERROR!"
-      redirect_to("/authors/#{@author.id}/edit")
-    end
+    author.update(author_params)
+    redirect_to("/authors/#{author.id}")
   end
 
   def destroy
